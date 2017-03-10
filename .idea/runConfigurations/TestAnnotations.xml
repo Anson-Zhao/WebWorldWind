@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="TestAnnotations" type="JavascriptDebugType" factoryName="JavaScript Debug" uri="http://localhost:63342/WebWorldWind/examples/TestPlacemarksAnnotations.html">
+  <configuration default="false" name="TestAnnotations" type="JavascriptDebugType" factoryName="JavaScript Debug" uri="http://localhost:63342/WebWorldWind/examples/TestPolygons.html">
     <method />
   </configuration>
 </component>

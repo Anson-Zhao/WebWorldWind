@@ -9,12 +9,10 @@
  */
 
 requirejs(['../src/WorldWind',
-        './LayerManager',
-        './AnnotationController'
+        './LayerManager'
     ],
     function (ww,
-              LayerManager,
-              AnnotationController) {
+              LayerManager) {
         "use strict";
 
         // Tell World Wind to log only warnings.
@@ -39,6 +37,7 @@ requirejs(['../src/WorldWind',
             layers[l].layer.enabled = layers[l].enabled;
             wwd.addLayer(layers[l].layer);
         }
+
 
         // Define the images we'll use for the placemarks.
         var images = [
@@ -102,16 +101,8 @@ requirejs(['../src/WorldWind',
 
         //       var layerManger = new LayerManager(wwd);
 
-        var locations = [
-            new WorldWind.Position(45.759506, 21.227948, 1e2),
-            new WorldWind.Position(39.238384, 58.331522, 1e2),
-            new WorldWind.Position(62.905780, 93.247174, 1e2),
-            new WorldWind.Position(54.560028, -102.221517, 1e2),
-            new WorldWind.Position(40.964231, -103.627767, 1e2),
-            new WorldWind.Position(72.913535, -41.752785, 1e2),
-            new WorldWind.Position(-22.061476, 133.611391, 1e2),
-            new WorldWind.Position(-11.820326, -66.076097, 1e2),
-            new WorldWind.Position(7.061353, 10.212961, 1e2)
+       var locations = [
+            new WorldWind.Position(41.451979, -74.437660, 1e2)
         ];
 
         var annotations = [],
@@ -120,16 +111,6 @@ requirejs(['../src/WorldWind',
             insets;
 
         var backgroundColors = [
-            WorldWind.Color.RED,
-            WorldWind.Color.GREEN,
-            WorldWind.Color.MAGENTA,
-            WorldWind.Color.BLUE,
-            WorldWind.Color.DARK_GRAY,
-            WorldWind.Color.BLACK,
-            WorldWind.Color.BLACK,
-            WorldWind.Color.RED,
-            WorldWind.Color.BLACK,
-            WorldWind.Color.BLACK,
             WorldWind.Color.BLACK];
 
         for (var z = 0; z < locations.length; z++) {
@@ -148,7 +129,7 @@ requirejs(['../src/WorldWind',
             annotationAttributes.insets = new WorldWind.Insets(10, 10, 10, 10);
 
             annotation = new WorldWind.Annotation(locations[z], annotationAttributes);
-            annotation.label = "Lorem Ipsum is simply dummy text of the printing and typesetting industry.";
+            annotation.label = "Welcome to Fei Tianacademy of the Arts! :)";
             annotations.push(annotation);
             annotationsLayer.addRenderable(annotation);
         }
