@@ -9,7 +9,7 @@
  */
 
 requirejs(['../src/WorldWind',
-        './LayerManager'],
+        './TestLayerManager'],
     function (ww,
               LayerManager) {
         "use strict";

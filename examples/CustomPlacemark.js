@@ -56,7 +56,7 @@ requirejs(['../src/WorldWind',
             size = 64, c = size / 2  - 0.5, innerRadius = 5, outerRadius = 20;
 
         canvas.width = size;
-        canvas.height = size;blab
+        canvas.height = size;
 
         var gradient = ctx2d.createRadialGradient(c, c, innerRadius, c, c, outerRadius);
         gradient.addColorStop(0, 'rgb(255, 0, 0)');
